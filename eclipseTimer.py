@@ -10,9 +10,8 @@ from datetime import datetime
 from datetime import timedelta
 from dateutil import tz
 
-# Weather getting data from the internet
-# If True internet connection needed
-ReadFromWeb = True
+# Getting Location online or from file
+GetLocation = True
 
 # All times are in UTC
 t0 = datetime.utcnow()
@@ -402,7 +401,7 @@ def mainLoop(window):
         time.sleep(0.01)
 
 
-if ReadFromWeb:
+if GetLocation:
     getData()
 
 calculateLocalTimes()
