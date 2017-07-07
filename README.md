@@ -45,4 +45,4 @@ If beeping activated (see `Run`), the programs start beeping (throgh the pc inte
 0:03 single beep\
 0:02 single beep\
 0:01 single beep\
-0:00 Long beep\
+0:00 Long beep
