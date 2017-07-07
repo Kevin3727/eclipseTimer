@@ -11,8 +11,12 @@ Internect connection is needed for gathering the eclipse information of your loc
 
 Remember to sync your computer clock for accuracy. Time zone does not affect the coutdown since all times are in UTC. However the local time shown is based on your computer timezone.
 
+## Run
+
 [optional] to activate pc speaker (beeps only if there is totality at your location):
 $ sudo modprobe pcspkr
 
 to run the program:
 $ ./eclipseTimer.py
+
+## Beeping time
