@@ -9,7 +9,7 @@ Compatible with Linux only! (python3 is needed)
 
 Internect connection is needed for gathering the eclipse information of your location. You may save the information so you won't need internet connection at the day of the eclipse.
 
-to activate pc speaker:
+[optional] to activate pc speaker (beeps only if there is totality at your location):
 $ sudo modprobe pcspkr
 
 to run the program:
