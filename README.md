@@ -7,7 +7,7 @@ This timer beeps (through system sound not from the speakers) near the 2nd and 3
 
 Compatible with Linux only! (python3 is needed)
 
-Internect connection is needed for gathering the eclipse information of your location (US city/town or by entering latitude and longitude). You may save the information so you won't need internet connection at the day of the eclipse.
+Internect connection is needed for gathering the eclipse information of your location (by entering US city/town or by latitude and longitude). You may save the information so you won't need internet connection at the day of the eclipse.
 
 Remember to sync your computer clock for accuracy. Time zone does not affect the coutdown since all times are in UTC. However the local time shown is based on your computer timezone.
 
