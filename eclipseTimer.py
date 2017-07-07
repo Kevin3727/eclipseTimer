@@ -4,6 +4,7 @@ import curses
 import os
 import pickle
 import subprocess
+import sys
 import time
 import urllib3
 from datetime import datetime
@@ -15,7 +16,7 @@ GetLocation = True
 
 # All times are in UTC
 t0 = datetime.utcnow()
-# default times are for test only
+# default times are for tests only
 C1 = t0.replace(hour=0, minute=0, second=7, microsecond=200000)
 C2 = t0.replace(hour=0, minute=0, second=51, microsecond=400000)
 C3 = t0.replace(hour=0, minute=25, second=0, microsecond=500000)
@@ -33,6 +34,7 @@ Altitude = ['', '', '', '']
 Azimuth = ['', '', '', '']
 
 
+# Beep times
 # b5:00, b4:00, b3:00, bb2:00, b1:30, bbb1:00, b0:50,  b0:40,  bbb0:30,
 # b0:25, bb0:20, b0:15, bb0:10, b0:09, b0:08, b0:07, b0:06, bb0:05,
 # b0:04, b0:03, b0:02, b0:01, Lb0:00
@@ -82,7 +84,8 @@ def getData():
         'To get data online enter [0], to load location data enter [1]: ')
     if _load is '1':
         _locName = input('Enter location name: ')
-        _locNameFull = './eclipseLocation_' + _locName + '.p'
+        _locNameFull = os.path.dirname(
+            sys.argv[0]) + '/eclipseLocation_' + _locName + '.p'
         if os.path.exists(_locNameFull):
             [C1, C2, C3, C4, Altitude, Azimuth] = pickle.load(
                 open(_locNameFull, 'rb'))
@@ -226,7 +229,8 @@ def getData():
     if _save in ['y', 'Y', '']:
         _locName = input(
             'Enter location name (without space) for future use: ')
-        _locNameFull = './eclipseLocation_' + _locName + '.p'
+        _locNameFull = os.path.dirname(
+            sys.argv[0]) + '/eclipseLocation_' + _locName + '.p'
         if os.path.exists(_locNameFull):
             print('WARNING: location already exists!')
             raise NameError
@@ -316,7 +320,7 @@ def mainLoop(window):
             window.addstr(4, 42, "at this location")
         else:
             window.addstr(13, 37, "Duration of Totality:")
-            window.addstr(14, 42, str(C3-C2)[:-5])
+            window.addstr(14, 42, str(C3 - C2)[:-5])
         if now < C1:
             window.addstr(1, 1, "Time to C1: ")
             window.addstr(1, 20, str(C1 - now)[:-7])
