@@ -9,7 +9,7 @@ Compatible with Linux only! (python3 is needed)
 
 Internect connection is needed for gathering the eclipse information of your location (US city/town or by entering latitude and longitude). You may save the information so you won't need internet connection at the day of the eclipse.
 
-Remember to sync your computer clock for accuracy. Times zone does not affect the coutdown since all times are in UTC. However the local time shown is based on your computer timezone.
+Remember to sync your computer clock for accuracy. Time zone does not affect the coutdown since all times are in UTC. However the local time shown is based on your computer timezone.
 
 [optional] to activate pc speaker (beeps only if there is totality at your location):
 $ sudo modprobe pcspkr
