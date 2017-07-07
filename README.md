@@ -23,7 +23,7 @@ $ ./eclipseTimer.py
 
 If beeping activated (see `Run`), the programs start beeping (throgh the pc internal speaker) before the start and before the end of totality at intervals shown bellow [minute:second]:
 
-5:00 single beep
+5:00 single beep\
 4:00 single beep
 3:00 single beep
 2:00 double beep
