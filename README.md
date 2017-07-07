@@ -13,10 +13,10 @@ Remember to sync your computer clock for accuracy. Time zone does not affect the
 
 ### Run
 
-[optional] to activate pc speaker (beeps only if there is totality at your location):
+[optional] to activate pc speaker (beeps only if there is totality at your location):\
 $ sudo modprobe pcspkr
 
-to run the program:
+to run the program:\
 $ python3 ./eclipseTimer.py
 
 ### Beeping time
