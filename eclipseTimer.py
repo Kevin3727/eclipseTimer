@@ -405,9 +405,15 @@ def mainLoop(window):
         time.sleep(0.01)
 
 
-if GetLocation:
-    getData()
+def main():
 
-calculateLocalTimes()
+    if GetLocation:
+        getData()
 
-curses.wrapper(mainLoop)
+    calculateLocalTimes()
+
+    curses.wrapper(mainLoop)
+
+
+if __name__ == '__main__':
+    main()
