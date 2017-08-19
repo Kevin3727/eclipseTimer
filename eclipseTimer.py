@@ -17,9 +17,9 @@ GetLocation = True
 # All times are in UTC
 t0 = datetime.utcnow()
 # default times are for tests only
-C1 = t0.replace(hour=0, minute=0, second=7, microsecond=200000)
-C2 = t0.replace(hour=0, minute=0, second=51, microsecond=400000)
-C3 = t0.replace(hour=0, minute=25, second=0, microsecond=500000)
+C1 = t0.replace(hour=23, minute=0, second=7, microsecond=200000)
+C2 = t0.replace(hour=23, minute=0, second=51, microsecond=400000)
+C3 = t0.replace(hour=23, minute=25, second=0, microsecond=500000)
 C4 = t0.replace(hour=23, minute=59, second=25, microsecond=600000)
 
 if C1 > C2:
@@ -95,6 +95,12 @@ def getData():
             raise NameError
     elif _load is '0':
         pass
+    elif _load is 't':
+        C1 = datetime.utcnow() - timedelta(seconds=10000)
+        C2 = datetime.utcnow() + timedelta(seconds=30)
+        C3 = datetime.utcnow() + timedelta(seconds=180)
+        C4 = datetime.utcnow() + timedelta(seconds=10000)
+        return
     else:
         raise ValueError  # Invalid input
     # check internet connection
